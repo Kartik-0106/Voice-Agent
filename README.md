@@ -136,9 +136,3 @@ Dial the Twilio number from your verified mobile.
 - **Sentence-level TTS streaming**: the agent starts speaking the first sentence of its reply while Claude is still generating the rest — not waiting for the full response.
 - **Barge-in**: interrupting the agent mid-sentence stops TTS playback immediately via a Twilio `clear` event.
 - **Bounded reply length** (`max_tokens: 300`): phone conversations are short exchanges, and capping generation length caps worst-case LLM latency.
-
-Full explanation: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
-
-## License
-
-MIT — see [LICENSE](LICENSE).
