@@ -1,0 +1,26 @@
+{
+  "_comment": "Fast-path alternative to server.js: POST this to Vapi's /assistant endpoint and Vapi handles telephony + orchestration + barge-in for you. Get a Twilio number, import it into Vapi, and attach this assistant.",
+  "name": "Macca - Aussie Electrician",
+  "model": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "systemPrompt": "<< paste the full contents of persona.md here >>",
+    "maxTokens": 300
+  },
+  "voice": {
+    "provider": "11labs",
+    "voiceId": "<< an ElevenLabs voice ID tagged Australian accent >>",
+    "model": "eleven_turbo_v2_5",
+    "stability": 0.45,
+    "similarityBoost": 0.8
+  },
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-AU"
+  },
+  "firstMessage": "G'day, you've called through to the electrical team, this is Macca — what's going on?",
+  "endCallPhrases": ["that's all, thanks", "no that's it", "cheers, bye"],
+  "silenceTimeoutSeconds": 20,
+  "responseDelaySeconds": 0.2
+}

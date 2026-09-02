@@ -1,0 +1,19 @@
+{
+  "name": "aussie-sparky-voice-agent",
+  "version": "1.0.0",
+  "description": "Phone-callable Australian electrician AI voice agent",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node test-persona.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@deepgram/sdk": "^3.9.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-ws": "^5.0.2",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.68.0"
+  }
+}
